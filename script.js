@@ -21,19 +21,19 @@ function getHumanChoice() {
 
 function playRound(Human, Computer) {
   if (Human === "rock" && Computer === "paper") {
-    console.log("you lose !");
+    
     return "you lose !";
   } else if (Human === "paper" && Computer === "scissors") {
-    console.log("you lose !");
+    
     return "you lose !";
   } else if (Human === "scissors" && Computer === "rock") {
-    console.log("you lose !");
+    
     return "you lose !";
   } else if (Human === Computer) {
-    console.log("tie !");
+    
     return "you lose !";
   } else {
-    console.log("you are the winer !!");
+    
     return "you are the winer !!"
   }
 }
