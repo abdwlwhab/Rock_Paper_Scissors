@@ -72,7 +72,7 @@ function playRound(Human, Computer) {
   if (humanScore > computerScore) {
     document.querySelector(".winner").textContent = "🎉 you are the Winner!";
   } else if (computerScore > humanScore) {
-    document.querySelector(".winner").textContent = "🤖 Computer is the Winner!";
+    document.querySelector(".winner").textContent = " Computer is the Winner!";
   } else {
     document.querySelector(".winner").textContent = "⚖️ It's a Tie!";
   }
