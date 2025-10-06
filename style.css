@@ -78,7 +78,50 @@
   50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
+/* 
 .result{
     color: aliceblue;
-}
+} */
+ .GR{
+    display: flex;
+    gap: 10px;
+    /* color: aliceblue; */
+    margin-left: 300px;
+    margin-top: 75px;
+    font-weight:bold;
+    font-size: larger;
+ }
+ 
+ .body{
+    display: flex;
+    flex-direction: column;
+    
+ }
+ 
+ .HumanScore{
+    display: flex;
+    margin-left: 300px;
+    font-weight:bold;
+    font-size: larger;
+ }
+
+ .computerScore{
+
+     display: flex;
+    margin-left: 300px;
+    font-weight:bold;
+    font-size: larger;
+
+ }
+ .tieScore{
+    display: flex;
+    margin-left: 300px;
+    font-weight:bold;
+    font-size: larger;
+ }
+ .score{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+ }

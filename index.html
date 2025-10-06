@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="./script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="title">Rock_paper_scissors</div>
 
-    <div class="title">
-        Rock_paper_scissors
+    <div class="body">
+      <div class="btn">
+        <div class="img-box Rock"><img src="./img/Rock.jpg" alt="Rock" /></div>
+
+        <div class="img-box paper">
+          <img src="./img/paper.jpg" alt="Paper" />
+        </div>
+
+        <div class="img-box scissors">
+          <img src="./img/scissors.jpg" alt="scissors" />
+        </div>
+      </div>
+      <div class="score">
+        <div class="GR">
+          <div>GameStatus :</div>
+          <div class="result"></div>
+        </div>
+
+        <div class="HumanScore">
+          <div>HumanScore :</div>
+          <div class="resultHuman"></div>
+        </div>
+
+        <div class="computerScore">
+          <div>computerScore :</div>
+          <div class="resultComputer"></div>
+        </div>
+
+        <div class="tieScore">
+          <div>tieScore :</div>
+          <div class="resultTie"></div>
+        </div>
+      </div>
+      <div class="winner"></div>
     </div>
-
-    <div class="btn">
-        <div class="img-box Rock" ><img src="./img/Rock.jpg" alt="Rock"></div>
-        <div class="img-box paper" ><img src="./img/paper.jpg" alt="Paper"></div>
-        <div class="img-box scissors" ><img src="./img/scissors.jpg" alt="scissors"></div>
-    </div>
-
-</body>
+  </body>
 </html>

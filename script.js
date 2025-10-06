@@ -17,62 +17,107 @@ function getComputerChoice() {
 //   return HumanChoice;
 // }
 
+let resultHuman = document.querySelector(".resultHuman");
+let resultComputer = document.querySelector(".resultComputer");
+let resultTie = document.querySelector(".resultTie");
 
+let humanScore = 0;
+let computerScore = 0;
+let tie = 0;
+
+let rounds = 0 ;
+const maxRounds = 5 ;
 
 function playRound(Human, Computer) {
-  if (Human === "rock" && Computer === "paper") {
-    console.log("you lose !! hhhhh")
-    return "you lose !";
-  } else if (Human === "paper" && Computer === "scissors") {
-    console.log("you lose !! hhhhh")
-    return "you lose !";
-  } else if (Human === "scissors" && Computer === "rock") {
-    console.log("you lose !! hhhhh")
-    return "you lose !";
-  } else if (Human === Computer) {
-    console.log("tie")
-    return "tie";
+  if(rounds>=maxRounds){return}
+
+  
+    if (Human === "rock" && Computer === "paper") {
+      
+      result.textContent='you lost !'
+      computerScore++;
+      
+    } else if (Human === "paper" && Computer === "scissors") {
+      
+      result.textContent='you lost !'
+      computerScore++;
+
+    } else if (Human === "scissors" && Computer === "rock") {
+      
+      result.textContent='you lost !'
+      computerScore++;
+      
+    } else if (Human === Computer) {
+      
+      result.textContent='Tie !'
+      tie++;
+      
+    } else {
+      
+      result.textContent="  you are the winer !!";
+      humanScore++;
+      
+    }
+
+  rounds++;
+
+ 
+    resultHuman.textContent = humanScore;
+ 
+    resultComputer.textContent = computerScore;
+  
+    resultTie.textContent = tie;
+
+  if (rounds === maxRounds) {
+  if (humanScore > computerScore) {
+    document.querySelector(".winner").textContent = "🎉 you are the Winner!";
+  } else if (computerScore > humanScore) {
+    document.querySelector(".winner").textContent = "🤖 Computer is the Winner!";
   } else {
-    console.log(`you are the winner hhhh `)
-    return "you are the winer !!"
+    document.querySelector(".winner").textContent = "⚖️ It's a Tie!";
   }
 }
 
+}
 
+// function playGame() {
+//   let humanScore = 0;
+//   let computerScore = 0;
 
-function playGame() {
-  let humanScore = 0;
-  let computerScore = 0;
-  
-    const humanSelection = getHumanChoice();
-    const computerSelection = getComputerChoice();
-    const result = playRound(humanSelection, computerSelection);
-    if (result === "you lose !"){
-        computerScore++;
-    }
-    else if (result === "you are the winer !!") {
-        humanScore++;
+//     const humanSelection = getHumanChoice();
+//     const computerSelection = getComputerChoice();
+//     const result = playRound(humanSelection, computerSelection);
+//     if (result === "you lose !"){
+//         computerScore++;
+//     }
+//     else if (result === "you are the winer !!") {
+//         humanScore++;
 
-    }
-  
-     if (humanScore>computerScore){console.log(`you are the winner hhhh your score is :${humanScore}`)}
+//     }
 
-    else if (computerScore>humanScore){console.log("you lose !! hhhhh")}
-    
-    else {console.log("it is a tie mmmmm")}
-  }
- 
-const result =document.querySelector('.result')
+//      if (humanScore>computerScore){console.log(`you are the winner hhhh your score is :${humanScore}`)}
 
+//     else if (computerScore>humanScore){console.log("you lose !! hhhhh")}
 
+//     else {console.log("it is a tie mmmmm")}
+//   }
 
-  const rockBtn = document.querySelector(".img-box.Rock")
-  rockBtn.addEventListener('click' , () => result.textContent=playRound('rock',getComputerChoice()))
+const result = document.querySelector(".result");
 
-  const paperBtn = document.querySelector(".img-box.paper")
-  paperBtn.addEventListener('click' , () => result.textContent=playRound('paper',getComputerChoice()))
+const rockBtn = document.querySelector(".img-box.Rock");
+rockBtn.addEventListener(
+  "click",
+  () => (playRound("rock", getComputerChoice()))
+);
 
+const paperBtn = document.querySelector(".img-box.paper");
+paperBtn.addEventListener(
+  "click",
+  () => ( playRound("paper", getComputerChoice()))
+);
 
-  const scissorsBtn = document.querySelector(".img-box.scissors")
-  scissorsBtn.addEventListener('click' , () => result.textContent=playRound('scissors',getComputerChoice()))
-
+const scissorsBtn = document.querySelector(".img-box.scissors");
+scissorsBtn.addEventListener(
+  "click",
+  () => ( playRound("scissors", getComputerChoice()))
+);
