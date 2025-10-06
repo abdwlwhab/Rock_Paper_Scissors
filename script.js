@@ -21,19 +21,19 @@ function getComputerChoice() {
 
 function playRound(Human, Computer) {
   if (Human === "rock" && Computer === "paper") {
-    
+    console.log("you lose !! hhhhh")
     return "you lose !";
   } else if (Human === "paper" && Computer === "scissors") {
-    
+    console.log("you lose !! hhhhh")
     return "you lose !";
   } else if (Human === "scissors" && Computer === "rock") {
-    
+    console.log("you lose !! hhhhh")
     return "you lose !";
   } else if (Human === Computer) {
-    
-    return "you lose !";
+    console.log("tie")
+    return "tie";
   } else {
-    
+    console.log(`you are the winner hhhh `)
     return "you are the winer !!"
   }
 }
@@ -62,5 +62,17 @@ function playGame() {
     else {console.log("it is a tie mmmmm")}
   }
  
+const result =document.querySelector('.result')
 
+
+
+  const rockBtn = document.querySelector(".img-box.Rock")
+  rockBtn.addEventListener('click' , () => result.textContent=playRound('rock',getComputerChoice()))
+
+  const paperBtn = document.querySelector(".img-box.paper")
+  paperBtn.addEventListener('click' , () => result.textContent=playRound('paper',getComputerChoice()))
+
+
+  const scissorsBtn = document.querySelector(".img-box.scissors")
+  scissorsBtn.addEventListener('click' , () => result.textContent=playRound('scissors',getComputerChoice()))
 
